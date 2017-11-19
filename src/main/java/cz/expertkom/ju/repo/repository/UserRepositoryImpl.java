@@ -1,7 +1,6 @@
 package cz.expertkom.ju.repo.repository;
 
 import org.springframework.stereotype.Repository;
-
 import cz.expertkom.ju.interfaces.UserRepository;
 import cz.expertkom.ju.interfaces.entity.User;
 
@@ -11,8 +10,9 @@ public class UserRepositoryImpl implements UserRepository {
 	public User getUser(String username) {
 		User user = new User();
 		user.setFirstname("Karel");
-		user.setLastname("Novak555");
+		user.setLastname("Novak");
 		user.setUsername(username);
+		System.out.println("\ngetUser():"+username+"\n");
 
 		return user;
 	}
